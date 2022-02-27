@@ -1,0 +1,10 @@
+file = open('liczby.txt', 'r')
+if file.closed:
+    print("Nie ma pliku")
+    exit(0)
+suma = 0
+for line in file:
+    suma = suma + int(line)
+print(suma)
+
+file.close
