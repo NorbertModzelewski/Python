@@ -1,0 +1,12 @@
+file = open('ok.txt', 'r')
+if file.closed:
+    print("Nie ma pliku")
+    exit(0)
+
+for line in file:
+    i = 0
+    for char in line:
+        i+=1
+
+file.close
+print(i)
