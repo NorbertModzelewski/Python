@@ -1,0 +1,20 @@
+file = open('liczby.txt', 'r')
+if file.closed:
+    print("Nie ma pliku")
+    exit(0)
+suma_nine = 0
+suma_pa = 0
+tym = 0
+for line in file:
+    tym = int(line)
+    if tym%2==0:
+        suma_pa = suma_pa + tym
+    if tym%9==0:
+        suma_nine = suma_nine + tym
+
+print("Suma liczb parzystych:",suma_pa)
+print("Suma liczb podzielnych przez 9:",suma_nine)
+roznica = suma_pa - suma_nine
+print("Różnica sumy liczb przystych i sumy liczb podzielnych:",roznica)
+
+file.close
