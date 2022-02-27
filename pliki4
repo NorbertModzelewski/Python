@@ -1,0 +1,17 @@
+file = open('liczby.txt', 'r')
+if file.closed:
+    print("Nie ma pliku")
+    exit(0)
+suma_niepa = 0
+suma_pa = 0
+tym = 0
+for line in file:
+    tym = int(line)
+    if tym%2==0:
+        suma_pa = suma_pa + tym
+    if tym%2==1:
+        suma_niepa = suma_niepa + tym
+print(suma_pa)
+print(suma_niepa)
+
+file.close
