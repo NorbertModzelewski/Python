@@ -1,0 +1,18 @@
+def letter_range(start, stop="{", step=1):
+    for ord_ in range(ord(start.lower()), ord(stop.lower()), step):
+        yield chr(ord_)
+
+alfabet_co2 = list(letter_range("b", "z",step=2))
+
+file = open('ok.txt', 'r')
+if file.closed:
+    print("Nie ma pliku")
+    exit(0)
+i = 0
+for line in file:
+    for char in line:
+        if char in alfabet_co2:
+            i = i + 1
+
+file.close
+print(i)
