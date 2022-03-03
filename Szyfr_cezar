@@ -1,0 +1,16 @@
+print("A - !, B - @, C - #, D - $, E - %, F - ^, G - &, H - *, I - (, J - ), K - +, L - =, M - {, N -}, O - [, P -], R - ', S - |, T - /, U - ?, W - ., Y - <, Z - >")
+print("1 - A, 2 - B, 3 - C, 4 - D, 5 - E, 6 - F, 7 - G, 8 - H, 9 - I, 0 - J")
+print("Program szyfrujący cezara: ")
+print("Wprowadź tekst do szyfrowania: ")
+word =input().upper()
+print("Podaj ilość przesunięć: ")
+
+p = int(input())
+encrypted = ""
+for c in word:
+    if c !="\n":
+        ch = chr(ord(c)+ p)
+        if ord(ch) > ord('Z'):
+            ch = chr(ord(ch)-26)
+        encrypted +=ch
+print("Twój tekst po zaszyfrowaniu wygląda tak:"+encrypted)
